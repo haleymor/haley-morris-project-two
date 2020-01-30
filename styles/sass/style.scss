@@ -1,0 +1,406 @@
+@import "setup";
+@import "header";
+
+// styles
+
+body {
+    color: #2C2C2C;
+}
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+// maybe i can make these similar fonts a mixin
+
+h1 {
+    text-transform: uppercase;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 92px;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-family:'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+h4 {
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+a {
+    text-transform: uppercase;
+    color: #2C2C2C;
+}
+
+button {
+    background: #05AFC1;
+    border: none;
+    padding: 10px 20px;
+    a {
+        text-decoration: none;
+    }
+}
+
+i {
+    font-size: 26px;
+}
+
+.nav-bar {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    letter-spacing: 1px;
+}
+
+span {
+    font-family: 'Lora', serif;
+    font-size: 35px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+// header styles became a partial
+
+//home section styles
+.home {
+    background: #F6A823;
+    .home-page {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+.main-title {
+    position: relative;
+    img {
+        position: absolute;
+        width: 40%;
+        top: 10px;
+        right: 275px;
+    }
+}
+
+.sophie-img {
+    width: 30%;
+    box-shadow: 15px 15px white;
+    position: relative;
+    top: 60px;
+
+}
+
+
+
+// about section styles
+
+.about-section {
+    background: #F0EFED;
+    h2 {
+        margin-top: 0;
+        padding-top: 100px;
+    }
+}
+
+.who-is-sophie {
+    width: 70%;
+    margin-left: 100px;
+    padding-bottom: 80px;
+}
+
+//fav things styles
+.fav-things {
+    background: white;
+}
+
+// travelled section styles
+.about-sophie {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fav-things {
+    display: flex;
+    .fav-things-img {
+        background: #A82706;
+        width: 50%;
+        img {
+            width: 70%;
+            box-shadow: 15px #A82706;
+        }
+    }
+}
+
+.fav-things-content,
+.travelled-content {
+    width: 50%;
+    margin: 0 80px;
+    padding: 40px 0 80px;
+}
+
+.travelled-content {
+    text-align: right;
+}
+
+.travelled {
+    display: flex;
+    flex-direction: row-reverse;
+    .travelled-img {
+        background: #F6A823;
+        width: 50%;
+        img {
+            width: 70%;
+            box-shadow: 15px #A82706;
+        }
+    }
+}
+
+// blurb section styles 
+.blurb-section {
+    background: #F0EFED;
+    padding: 80px 0;
+}
+
+.blurbs {
+    display: flex;
+    flex-wrap: wrap;
+     margin: 0 100px;
+}
+
+.blurb {
+    margin: 0 10px;
+    width: calc(50% - 20px);
+    h3 {
+        margin-top: 0px;
+        padding-left: 15px;
+        font-size: 26px;
+    }
+}
+
+.icon-background {
+    background: #F6A823;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    i {
+        display: flex;
+        justify-content: center;
+        padding-top: 12px;
+    }
+}
+
+.blurb-title {
+    display: flex;
+    align-items: center;
+}
+
+//journey section image styles
+.journey-header-img {
+    background-image: url(../sophie-assets/home-image-4.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+}
+
+//journey section styles
+
+.journey-section {
+    background-color:#F0EFED;
+    padding: 80px 0;
+}
+.journey {
+    display: flex;
+    h2 {
+        margin-top: 0;
+    }
+}
+
+.journey-img {
+    width: 20%;
+    height: 100%;
+    margin-left: 40px;
+    box-shadow: 15px 15px #F6A823 ;
+}
+
+.journey-content {
+    width: 75%;
+    margin: 0 40px;
+    padding: 0 40px;
+}
+
+//gallery section styles
+
+.gallery img {
+    margin: 60px 20px
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+// BLOG SECTION
+
+// blog-home page styles
+.blog-home {
+    background-image: url(../sophie-assets/blog-image-1.jpg);
+    height: 50vh;
+    background-size: cover;
+    h1 {
+        margin: 0 0 0 150px;
+        position: relative;
+        top: 310px;
+        font-size: 62px;
+    }
+}
+
+//blog-section styles
+.blog-section {
+    background: #F0EFED;
+    padding: 80px 0px;
+}
+
+.column1,
+.column2 {
+    margin: 20px;
+}
+
+.column1 {
+    width: calc(25% - 40px);
+}
+
+.column2 {
+    width: 75%;
+}
+
+.blog-about-sophie {
+    background: white;
+    padding-top: 30px;
+    img {
+        padding: 0 30px;
+    }
+    .sophie-content {
+        padding: 30px 30px 10px;
+        h4 {
+            margin: 0;
+        }
+    }
+}
+
+.recent-posts {
+    background: white;
+    h4 {
+        margin-bottom: 0;
+        padding: 30px 30px 10px;
+    }
+    ul {
+        margin: 0;
+        list-style-type: none;
+        padding-bottom: 20px;
+    }
+    ul li:before {
+        content: "\2022";
+        color: #F6A823;
+        display: inline-block;
+        width: 20px;
+        font-size: 12px;
+    }
+    li {
+        padding-bottom: 5px;
+    }
+}
+
+.column {
+    display: flex;
+    justify-content: space-between;
+}
+
+.why-blog {
+    background: white;
+    padding: 30px;
+    border-bottom: 5px solid #F6A823
+}
+
+// jeremy and julia styles
+.jeremy-post,
+.julia-post {
+    background: white;
+    display: flex;
+    margin: 40px 0 10px;
+}
+
+.julia-post {
+    border-bottom: 5px solid #F6A823;
+}
+
+// form styles
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info input {
+    width: 45%;
+}
+
+.user-comment input {
+    width: 100%;
+}
+
+
+
+//footer styles
+
+footer {
+    background: #2C2C2C;
+    color: #F0EFED;
+    text-align: center;
+    p {
+        margin: 0;
+    }
+}
+
+
+
+
+
+// black - #2C2C2C
+// grey - #4F4F4F 
+// white - #F0EFED
+// dark grey blue - #285E64
+// teal accent - #05AFC1
+// orangey yellow - #F6A823
+// rust red - #A82706
+
+//heading text 24px bold, letter spacing 1
+// button text - roboto bold, 20px, lineheight:32px, spacing 1px
+// p - roboto regular, 20px, line-height 32px;

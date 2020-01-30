@@ -1,0 +1,16 @@
+header {
+    background: #F6A823;
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 250px;
+        padding: 20px 0 0;
+        li {
+            list-style: none;
+            a {
+                text-decoration: none;
+            }
+
+        }
+    }
+}
