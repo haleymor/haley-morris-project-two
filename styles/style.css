@@ -365,7 +365,7 @@ p {
 .main-title img {
   position: absolute;
   width: 40%;
-  top: 10px;
+  top: -40px;
   right: 275px;
 }
 
@@ -411,14 +411,15 @@ p {
 }
 
 .fav-things .fav-things-img {
-  background: #A82706;
   width: 50%;
+  -webkit-box-shadow: -100px 15px #A82706;
+          box-shadow: -100px 15px #A82706;
 }
 
 .fav-things .fav-things-img img {
-  width: 70%;
-  -webkit-box-shadow: 15px #A82706;
-          box-shadow: 15px #A82706;
+  width: 100%;
+  -webkit-box-shadow: 15px 15px #A82706;
+          box-shadow: 15px 15px #A82706;
 }
 
 .fav-things-content,
@@ -448,7 +449,7 @@ p {
 }
 
 .travelled .travelled-img img {
-  width: 70%;
+  width: 100%;
   -webkit-box-shadow: 15px #A82706;
           box-shadow: 15px #A82706;
 }
@@ -667,12 +668,33 @@ form {
           flex-direction: column;
 }
 
+.user-info,
+.user-comment {
+  margin-bottom: 20px;
+  font-size: 0;
+}
+
+.user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .user-info input {
-  width: 45%;
+  width: 49%;
+  padding: 20px;
+  border: none;
+  font-size: 18px;
 }
 
 .user-comment input {
   width: 100%;
+  padding: 20px 20px 200px;
+  font-size: 18px;
+  border: none;
 }
 
 footer {
@@ -683,4 +705,71 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+.contact-home {
+  background-image: url(../sophie-assets/contact-image-1.jpg);
+  height: 50vh;
+  background-size: cover;
+}
+
+.contact-home h1 {
+  margin: 0 0 0 150px;
+  position: relative;
+  top: 310px;
+  font-size: 62px;
+}
+
+h1 {
+  margin: 0;
+}
+
+.get-in-touch {
+  padding-top: 80px;
+  background: #F0EFED;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contact-info {
+  background: white;
+  width: 30%;
+  margin-bottom: 100px;
+}
+
+.contact-info .social-media,
+.contact-info h5,
+.contact-info p {
+  padding-left: 20px;
+}
+
+.contact-info .social-media i,
+.contact-info h5 i,
+.contact-info p i {
+  color: #F6A823;
+  padding: 40px 15px 20px;
+  font-size: 30px;
+}
+
+.contact-info h5 {
+  font-size: 24px;
+  margin: 0 0 20px 0;
+}
+
+.contact-info p {
+  margin: 0;
+}
+
+.contact {
+  padding-bottom: 80px;
+}
+
+.contact-form {
+  width: 65%;
 }

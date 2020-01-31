@@ -105,7 +105,7 @@ p {
     img {
         position: absolute;
         width: 40%;
-        top: 10px;
+        top: -40px;
         right: 275px;
     }
 }
@@ -150,14 +150,16 @@ p {
 .fav-things {
     display: flex;
     .fav-things-img {
-        background: #A82706;
         width: 50%;
+        box-shadow: -100px 15px #A82706;
         img {
-            width: 70%;
-            box-shadow: 15px #A82706;
+            width: 100%;
+            box-shadow: 15px 15px #A82706;
+            // box-shadow: -100px 15px #A82706;
         }
     }
 }
+
 
 .fav-things-content,
 .travelled-content {
@@ -177,7 +179,7 @@ p {
         background: #F6A823;
         width: 50%;
         img {
-            width: 70%;
+            width: 100%;
             box-shadow: 15px #A82706;
         }
     }
@@ -368,15 +370,31 @@ form {
     flex-direction: column;
 }
 
-.user-info input {
-    width: 45%;
+.user-info, 
+.user-comment {
+    margin-bottom: 20px;
+    font-size: 0;
 }
+
+.user-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-info input {
+    width: 49%;
+    padding: 20px;
+    border: none;
+    font-size: 18px;
+}
+
 
 .user-comment input {
     width: 100%;
+    padding: 20px 20px 200px;
+    font-size: 18px;
+    border: none;
 }
-
-
 
 //footer styles
 
@@ -389,18 +407,65 @@ footer {
     }
 }
 
+// CONTACT styles
+//contact-home styles
+.contact-home {
+    background-image: url(../sophie-assets/contact-image-1.jpg);
+    height: 50vh;
+    background-size: cover;
+    h1 {
+        margin: 0 0 0 150px;
+        position: relative;
+        top: 310px;
+        font-size: 62px;
+    }
+}
 
+h1 {
+    margin: 0;
+}
 
+//get in touch section styles 
+.get-in-touch {
+    padding-top: 80px;
+    background: #F0EFED;
+}
 
+//contact info section styles
+.contact {
+    display: flex;
+    justify-content: space-around;
+}
 
-// black - #2C2C2C
-// grey - #4F4F4F 
-// white - #F0EFED
-// dark grey blue - #285E64
-// teal accent - #05AFC1
-// orangey yellow - #F6A823
-// rust red - #A82706
+.contact-info {
+    background: white;
+    width: 30%;
+    margin-bottom: 100px;
+    .social-media,
+    h5,
+    p {
+        padding-left: 20px;
+        i {
+            color: #F6A823;
+            padding: 40px 15px 20px;
+            font-size: 30px;
+        }
+    }
+}
 
-//heading text 24px bold, letter spacing 1
-// button text - roboto bold, 20px, lineheight:32px, spacing 1px
-// p - roboto regular, 20px, line-height 32px;
+.contact-info h5 {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+}
+
+.contact-info p {
+    margin: 0;
+}
+
+.contact {
+    padding-bottom: 80px;
+}
+
+.contact-form {
+    width: 65%;
+}
