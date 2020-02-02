@@ -4,13 +4,15 @@ header {
         display: flex;
         justify-content: space-evenly;
         margin: 0 250px;
-        padding: 20px 0 0;
+        padding: 20px 0;
         li {
             list-style: none;
             a {
                 text-decoration: none;
             }
-
+            a:hover {
+                color: white;
+            }
         }
     }
 }

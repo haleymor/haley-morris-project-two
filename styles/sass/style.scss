@@ -1,5 +1,6 @@
 @import "setup";
 @import "header";
+@import "form";
 
 // styles
 
@@ -51,6 +52,10 @@ h4 {
     letter-spacing: 1px;
 }
 
+h5 {
+    font-family: 'Roboto', sans-serif;
+}
+
 a {
     text-transform: uppercase;
     color: #2C2C2C;
@@ -62,6 +67,7 @@ button {
     padding: 10px 20px;
     a {
         text-decoration: none;
+        font-weight: 700;
     }
 }
 
@@ -133,7 +139,7 @@ p {
 .who-is-sophie {
     width: 70%;
     margin-left: 100px;
-    padding-bottom: 80px;
+    padding-bottom: 120px;
 }
 
 //fav things styles
@@ -151,11 +157,11 @@ p {
     display: flex;
     .fav-things-img {
         width: 50%;
-        box-shadow: -100px 15px #A82706;
         img {
             width: 100%;
-            box-shadow: 15px 15px #A82706;
-            // box-shadow: -100px 15px #A82706;
+            box-shadow: 15px 15px #A82706, -100px 15px #A82706;
+            position: relative;
+            top: -38px;
         }
     }
 }
@@ -164,31 +170,38 @@ p {
 .fav-things-content,
 .travelled-content {
     width: 50%;
-    margin: 0 80px;
-    padding: 40px 0 80px;
+    margin: 0;
+    padding: 40px 100px 80px;
+}
+
+.fav-things-content {
+    padding: 40px 40px 0 100px;
 }
 
 .travelled-content {
     text-align: right;
+    padding: 0 100px 40px 80px;
 }
 
 .travelled {
     display: flex;
     flex-direction: row-reverse;
     .travelled-img {
-        background: #F6A823;
         width: 50%;
         img {
             width: 100%;
-            box-shadow: 15px #A82706;
+            box-shadow: 15px 15px #F6A823, 100px 15px #F6A823;
+            position: relative;
+            top: 40px;
         }
     }
+
 }
 
 // blurb section styles 
 .blurb-section {
     background: #F0EFED;
-    padding: 80px 0;
+    padding: 100px 0 50px;
 }
 
 .blurbs {
@@ -198,12 +211,19 @@ p {
 }
 
 .blurb {
-    margin: 0 10px;
+    margin: 20px 10px;
     width: calc(50% - 20px);
+    display: flex;
     h3 {
-        margin-top: 0px;
-        padding-left: 15px;
+        margin: 0;
         font-size: 26px;
+    }
+    .blurb-content {
+        padding-left: 20px;
+        width: 100%;
+        p {
+            margin-top: 15px;
+        }
     }
 }
 
@@ -217,11 +237,6 @@ p {
         justify-content: center;
         padding-top: 12px;
     }
-}
-
-.blurb-title {
-    display: flex;
-    align-items: center;
 }
 
 //journey section image styles
@@ -289,6 +304,21 @@ p {
 .blog-section {
     background: #F0EFED;
     padding: 80px 0px;
+    a {
+        color: #285E64;
+        text-decoration: none;
+        text-transform: none;
+        font-weight: 700;
+    }
+    span {
+        color: #285E64;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    button a {
+        text-transform: uppercase;
+        color: black;
+    }
 }
 
 .column1,
@@ -297,11 +327,15 @@ p {
 }
 
 .column1 {
-    width: calc(25% - 40px);
+    width: calc(30% - 40px);
 }
 
 .column2 {
-    width: 75%;
+    width: 70%;
+    h2 {
+        margin: 20px 0 0;
+        font-size: 32px;
+    }
 }
 
 .blog-about-sophie {
@@ -311,9 +345,13 @@ p {
         padding: 0 30px;
     }
     .sophie-content {
-        padding: 30px 30px 10px;
+        padding: 25px 30px 10px;
         h4 {
             margin: 0;
+            font-size: 20px;
+        }
+        p {
+            margin-top: 10px;
         }
     }
 }
@@ -322,7 +360,8 @@ p {
     background: white;
     h4 {
         margin-bottom: 0;
-        padding: 30px 30px 10px;
+        font-size: 20px;
+        padding: 30px 30px 15px;
     }
     ul {
         margin: 0;
@@ -348,8 +387,11 @@ p {
 
 .why-blog {
     background: white;
-    padding: 30px;
-    border-bottom: 5px solid #F6A823
+    padding: 30px 30px 10px;
+    border-bottom: 5px solid #F6A823;
+    .blogger-post p:first-of-type {
+        font-style: italic;
+    }
 }
 
 // jeremy and julia styles
@@ -358,42 +400,33 @@ p {
     background: white;
     display: flex;
     margin: 40px 0 10px;
+    h5 {
+        color: #285E64;
+        font-size: 20px;
+        margin: 0;
+        font-style: italic;
+    }
 }
 
 .julia-post {
     border-bottom: 5px solid #F6A823;
+    margin: 20px 0 30px;
 }
 
-// form styles
-form {
-    display: flex;
-    flex-direction: column;
+.jeremy-img,
+.julia-img {
+    padding: 40px 20px 40px 40px;
+    width: 35%;
+    margin-bottom: 50px;
 }
 
-.user-info, 
-.user-comment {
-    margin-bottom: 20px;
-    font-size: 0;
-}
-
-.user-info {
-    display: flex;
-    justify-content: space-between;
-}
-
-.user-info input {
-    width: 49%;
-    padding: 20px;
-    border: none;
-    font-size: 18px;
-}
-
-
-.user-comment input {
-    width: 100%;
-    padding: 20px 20px 200px;
-    font-size: 18px;
-    border: none;
+.julia-content,
+.jeremy-content {
+    padding: 40px 10px 0;
+    margin-right: 10px;
+    p {
+        margin-top: 10px;
+    }
 }
 
 //footer styles
@@ -427,7 +460,7 @@ h1 {
 
 //get in touch section styles 
 .get-in-touch {
-    padding-top: 80px;
+    padding-top: 100px;
     background: #F0EFED;
 }
 
@@ -435,20 +468,24 @@ h1 {
 .contact {
     display: flex;
     justify-content: space-around;
+    padding-bottom: 100px;
 }
 
 .contact-info {
     background: white;
     width: 30%;
-    margin-bottom: 100px;
+    margin-bottom: 130px;
     .social-media,
     h5,
     p {
-        padding-left: 20px;
+        padding-left: 30px;
         i {
             color: #F6A823;
             padding: 40px 15px 20px;
             font-size: 30px;
+        }
+        i:first-child {
+            padding-left: 0px;
         }
     }
 }
@@ -460,10 +497,6 @@ h1 {
 
 .contact-info p {
     margin: 0;
-}
-
-.contact {
-    padding-bottom: 80px;
 }
 
 .contact-form {

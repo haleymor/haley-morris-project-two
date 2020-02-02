@@ -1,0 +1,30 @@
+// form styles
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info, 
+.user-comment {
+    margin-bottom: 20px;
+    font-size: 0;
+}
+
+.user-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-info input {
+    width: 49%;
+    padding: 25px 20px 25px 20px;
+    border: none;
+    font-size: 18px;
+}
+
+.user-comment input {
+    width: 100%;
+    padding: 50px 20px 220px;
+    font-size: 18px;
+    border: none;
+}
