@@ -272,6 +272,16 @@ form {
           flex-direction: column;
 }
 
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
 .user-info,
 .user-comment {
   margin-bottom: 20px;
@@ -292,6 +302,7 @@ form {
   padding: 25px 20px 25px 20px;
   border: none;
   font-size: 18px;
+  font-style: italic;
 }
 
 .user-comment input {
@@ -299,6 +310,7 @@ form {
   padding: 50px 20px 220px;
   font-size: 18px;
   border: none;
+  font-style: italic;
 }
 
 html {
@@ -321,7 +333,7 @@ img {
 
 h1 {
   text-transform: uppercase;
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
   font-weight: 700;
   font-size: 10em;
   line-height: 92px;
@@ -329,7 +341,7 @@ h1 {
 
 h2 {
   text-transform: uppercase;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 4.2em;
   letter-spacing: 1px;
@@ -337,7 +349,7 @@ h2 {
 
 h3 {
   text-transform: uppercase;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 3.2em;
   letter-spacing: 1px;
@@ -345,14 +357,14 @@ h3 {
 
 h4 {
   text-transform: uppercase;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 2.4em;
   letter-spacing: 1px;
 }
 
 h5 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 a {
@@ -377,7 +389,7 @@ i {
 }
 
 .nav-bar {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 2em;
   line-height: 29px;
@@ -385,12 +397,12 @@ i {
 }
 
 span {
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
   font-size: 2.4em;
 }
 
 p {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 2em;
   line-height: 32px;
 }
@@ -418,8 +430,14 @@ p {
 .main-title img {
   position: absolute;
   width: 40%;
-  top: -40px;
-  right: 275px;
+  top: 25px;
+  right: 265px;
+}
+
+.main-title i {
+  color: black;
+  font-size: 6em;
+  visibility: hidden;
 }
 
 .sophie-img {
@@ -480,6 +498,7 @@ p {
   width: 50%;
   margin: 0;
   padding: 40px 100px 80px;
+  max-height: 100%;
 }
 
 .fav-things-content {
@@ -629,6 +648,10 @@ p {
   font-size: 6.2em;
 }
 
+.blog-home i {
+  visibility: hidden;
+}
+
 .blog-section {
   background: #F0EFED;
   padding: 80px 0px;
@@ -650,6 +673,15 @@ p {
 .blog-section button a {
   text-transform: uppercase;
   color: black;
+}
+
+.column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .column1,
@@ -706,6 +738,7 @@ p {
   margin: 0;
   list-style-type: none;
   padding-bottom: 20px;
+  font-size: 1.8em;
 }
 
 .recent-posts ul li:before {
@@ -718,15 +751,6 @@ p {
 
 .recent-posts li {
   padding-bottom: 5px;
-}
-
-.column {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .why-blog {
@@ -779,16 +803,6 @@ p {
   margin-top: 10px;
 }
 
-footer {
-  background: #2C2C2C;
-  color: #F0EFED;
-  text-align: center;
-}
-
-footer p {
-  margin: 0;
-}
-
 .contact-home {
   background-image: url(../sophie-assets/contact-image-1.jpg);
   height: 50vh;
@@ -802,8 +816,8 @@ footer p {
   font-size: 6.2em;
 }
 
-h1 {
-  margin: 0;
+.contact-home i {
+  visibility: hidden;
 }
 
 .get-in-touch {
@@ -859,6 +873,17 @@ h1 {
   width: 65%;
 }
 
+footer {
+  background: #2C2C2C;
+  color: #F0EFED;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+/*Adjustment for font size and nav-bar*/
 @media (max-width: 980px) {
   html {
     font-size: 55%;
@@ -885,6 +910,7 @@ h1 {
   }
 }
 
+/* Adjustment of nav-bar */
 @media (max-width: 850px) {
   header ul {
     margin: 0 150px;
@@ -895,6 +921,9 @@ h1 {
 @media (max-width: 768px) {
   header nav {
     display: none;
+  }
+  .main-title i {
+    visibility: visible;
   }
   .home-page {
     -ms-flex-wrap: wrap;
@@ -1000,6 +1029,13 @@ h1 {
   }
   .blog-home,
   .contact-home {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     height: 30vh;
   }
   .blog-home h1,
@@ -1008,6 +1044,12 @@ h1 {
     top: 0;
     margin: 0;
     text-align: center;
+  }
+  .blog-home i,
+  .contact-home i {
+    visibility: visible;
+    margin: 0 auto;
+    font-size: 6em;
   }
   .blog-section,
   .get-in-touch {
@@ -1065,6 +1107,7 @@ h1 {
   }
 }
 
+/* Contact section extra formatting*/
 @media (max-width: 700px) {
   .contact {
     -ms-flex-wrap: wrap;
@@ -1091,6 +1134,7 @@ h1 {
   }
 }
 
+/*Extra break for all sections except contact page*/
 @media (max-width: 600px) {
   h1 {
     font-size: 7em;

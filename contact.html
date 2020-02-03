@@ -30,6 +30,7 @@
     <!--contact-home section starts-->
     <section class="contact-home">
         <h1>get in touch</h1>
+        <i class="fas fa-bars"></i>
     </section>
     <!--contact-home section ends-->
     <!--get in touch section starts-->
@@ -53,13 +54,16 @@
             <!-- contact form starts -->
             <form class="contact-form form-section">
                 <div class="user-info">
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Email address">
+                    <label class="visually-hidden" for="name">Your Name:</label>
+                    <input type="text" name="name" placeholder="Name">
+                    <label class="visually-hidden" for="email">Your Email:</label>
+                    <input type="email" name="email" placeholder="Email address">
                 </div>
                 <div class="user-comment">
-                    <input type="text" placeholder="Message">
+                    <label class="visually-hidden" for="message">Your Message:</label>
+                    <input type="text" name="message" placeholder="Message">
                 </div>
-                <button><a href="#">submit</a></button>
+                <button type="submit"><a href="#">submit</a></button>
             </form>
         </div> <!--wrapper ends here-->
         <!-- contact form ends -->

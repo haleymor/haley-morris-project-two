@@ -1,9 +1,15 @@
-@import "setup";
-@import "header";
-@import "form";
+@import "partials/setup";
+@import "partials/header";
+@import "partials/form";
 
-// styles
+//SCSS variables
+$primary: #F6A823;
+$secondary: #F0EFED;
+$accent: #05AFC1;
+$base-font: 'Roboto', sans-serif;
+$accent-font: 'Lora', serif;
 
+// general styles
 html {
     font-size: 62.5%;
 }
@@ -22,11 +28,9 @@ img {
     display: block;
 }
 
-// maybe i can make these similar fonts a mixin
-
 h1 {
     text-transform: uppercase;
-    font-family: 'Lora', serif;
+    font-family: $accent-font;
     font-weight: 700;
     font-size: 10em;
     line-height: 92px;
@@ -34,7 +38,7 @@ h1 {
 
 h2 {
     text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
+    font-family: $base-font;
     font-weight: 700;
     font-size: 4.2em;
     letter-spacing: 1px;
@@ -42,7 +46,7 @@ h2 {
 
 h3 {
     text-transform: uppercase;
-    font-family:'Roboto', sans-serif;
+    font-family: $base-font;
     font-weight: 700;
     font-size: 3.2em;
     letter-spacing: 1px;
@@ -50,14 +54,14 @@ h3 {
 
 h4 {
     text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
+    font-family: $base-font;
     font-weight: 700;
     font-size: 2.4em;
     letter-spacing: 1px;
 }
 
 h5 {
-    font-family: 'Roboto', sans-serif;
+    font-family: $base-font;
 }
 
 a {
@@ -66,7 +70,7 @@ a {
 }
 
 button {
-    background: #05AFC1;
+    background: $accent;
     border: none;
     padding: 10px 20px;
     a {
@@ -81,7 +85,7 @@ i {
 }
 
 .nav-bar {
-    font-family: 'Roboto', sans-serif;
+    font-family: $base-font;
     font-weight: 700;
     font-size: 2em;
     line-height: 29px;
@@ -89,21 +93,19 @@ i {
 }
 
 span {
-    font-family: 'Lora', serif;
+    font-family: $accent-font;
     font-size: 2.4em;
 }
 
 p {
-    font-family: 'Roboto', sans-serif;
+    font-family: $base-font;
     font-size: 2em;
     line-height: 32px;
 }
 
-// header styles became a partial
-
 //home section styles
 .home {
-    background: #F6A823;
+    background: $primary;
     .home-page {
         display: flex;
         justify-content: space-evenly;
@@ -116,9 +118,15 @@ p {
     img {
         position: absolute;
         width: 40%;
-        top: -40px;
-        right: 275px;
+        top: 25px;
+        right: 265px;
     }
+}
+
+.main-title i {
+    color: black;
+    font-size: 6em;
+    visibility: hidden;
 }
 
 .sophie-img {
@@ -126,15 +134,11 @@ p {
     box-shadow: 15px 15px white;
     position: relative;
     top: 60px;
-
 }
 
-
-
 // about section styles
-
 .about-section {
-    background: #F0EFED;
+    background: $secondary;
     h2 {
         margin-top: 0;
         padding-top: 100px;
@@ -171,12 +175,12 @@ p {
     }
 }
 
-
 .fav-things-content,
 .travelled-content {
     width: 50%;
     margin: 0;
     padding: 40px 100px 80px;
+    max-height: 100%;
 }
 
 .fav-things-content {
@@ -195,17 +199,16 @@ p {
         width: 50%;
         img {
             width: 100%;
-            box-shadow: 15px 15px #F6A823, 100px 15px #F6A823;
+            box-shadow: 15px 15px $primary, 100px 15px $primary;
             position: relative;
             top: 40px;
         }
     }
-
 }
 
 // blurb section styles 
 .blurb-section {
-    background: #F0EFED;
+    background: $secondary;
     padding: 100px 0 50px;
 }
 
@@ -233,7 +236,7 @@ p {
 }
 
 .icon-background {
-    background: #F6A823;
+    background: $primary;
     border-radius: 50%;
     height: 50px;
     width: 50px;
@@ -253,9 +256,8 @@ p {
 }
 
 //journey section styles
-
 .journey-section {
-    background-color:#F0EFED;
+    background-color: $secondary;
     padding: 80px 0;
 }
 .journey {
@@ -269,7 +271,7 @@ p {
     width: 20%;
     height: 100%;
     margin-left: 40px;
-    box-shadow: 15px 15px #F6A823 ;
+    box-shadow: 15px 15px $primary ;
 }
 
 .journey-content {
@@ -279,7 +281,6 @@ p {
 }
 
 //gallery section styles
-
 .gallery img {
     margin: 60px 20px
 }
@@ -291,7 +292,6 @@ p {
 }
 
 // BLOG SECTION
-
 // blog-home page styles
 .blog-home {
     background-image: url(../sophie-assets/blog-image-1.jpg);
@@ -303,11 +303,14 @@ p {
         top: 310px;
         font-size: 6.2em;
     }
+    i {
+        visibility: hidden;
+    }
 }
 
 //blog-section styles
 .blog-section {
-    background: #F0EFED;
+    background: $secondary;
     padding: 80px 0px;
     a {
         color: #285E64;
@@ -324,6 +327,11 @@ p {
         text-transform: uppercase;
         color: black;
     }
+}
+
+.column {
+    display: flex;
+    justify-content: space-between;
 }
 
 .column1,
@@ -343,6 +351,7 @@ p {
     }
 }
 
+//about sophie blog section starts
 .blog-about-sophie {
     background: white;
     padding-top: 30px;
@@ -361,6 +370,7 @@ p {
     }
 }
 
+//recent posts styles
 .recent-posts {
     background: white;
     h4 {
@@ -372,10 +382,11 @@ p {
         margin: 0;
         list-style-type: none;
         padding-bottom: 20px;
+        font-size: 1.8em;
     }
     ul li:before {
         content: "\2022";
-        color: #F6A823;
+        color: $primary;
         display: inline-block;
         width: 20px;
         font-size: 1.2em;
@@ -385,15 +396,11 @@ p {
     }
 }
 
-.column {
-    display: flex;
-    justify-content: space-between;
-}
-
+//why blog section styles
 .why-blog {
     background: white;
     padding: 30px 30px 10px;
-    border-bottom: 5px solid #F6A823;
+    border-bottom: 5px solid $primary;
     .blogger-post p:first-of-type {
         font-style: italic;
     }
@@ -414,7 +421,7 @@ p {
 }
 
 .julia-post {
-    border-bottom: 5px solid #F6A823;
+    border-bottom: 5px solid $primary;
     margin: 20px 0 30px;
 }
 
@@ -434,18 +441,7 @@ p {
     }
 }
 
-//footer styles
-
-footer {
-    background: #2C2C2C;
-    color: #F0EFED;
-    text-align: center;
-    p {
-        margin: 0;
-    }
-}
-
-// CONTACT styles
+// CONTACT STYLES
 //contact-home styles
 .contact-home {
     background-image: url(../sophie-assets/contact-image-1.jpg);
@@ -457,16 +453,15 @@ footer {
         top: 310px;
         font-size: 6.2em;
     }
-}
-
-h1 {
-    margin: 0;
+    i {
+        visibility: hidden;
+    }
 }
 
 //get in touch section styles 
 .get-in-touch {
     padding-top: 100px;
-    background: #F0EFED;
+    background: $secondary;
 }
 
 //contact info section styles
@@ -485,7 +480,7 @@ h1 {
     p {
         padding-left: 30px;
         i {
-            color: #F6A823;
+            color: $primary;
             padding: 40px 15px 20px;
             font-size: 3em;
         }
@@ -508,8 +503,18 @@ h1 {
     width: 65%;
 }
 
-// media queries
+//footer styles
+footer {
+    background: #2C2C2C;
+    color: $secondary;
+    text-align: center;
+    p {
+        margin: 0;
+    }
+}
 
+//Media Queries
+/*Adjustment for font size and nav-bar*/
 @media (max-width: 980px) {
     html {
         font-size: 55%;
@@ -537,6 +542,7 @@ h1 {
     }
 }
 
+/* Adjustment of nav-bar */
 @media (max-width: 850px) {
     header ul {
         margin: 0 150px;
@@ -544,10 +550,13 @@ h1 {
 }
 
 /* Landscape phone to portrait tablet */
-
 @media (max-width: 768px) {
     header nav {
         display: none;
+    }
+
+    .main-title i {
+        visibility: visible;
     }
 
     .home-page {
@@ -639,20 +648,24 @@ h1 {
         img:last-child {
             margin-bottom: 60px;
         }
-
     }
 
     .blog-home,
     .contact-home {
+        display: flex;
+        flex-direction: column;
         height: 30vh;
-    }
-
-    .blog-home h1,
-    .contact-home h1 {
-        position: relative;
-        top: 0;
-        margin: 0;
-        text-align: center;
+        h1 {
+            position: relative;
+            top: 0;
+            margin: 0;
+            text-align: center;
+        }
+        i {
+            visibility: visible;
+            margin: 0 auto;
+            font-size: 6em;
+        }
     }
 
     .blog-section,
@@ -714,6 +727,7 @@ h1 {
     }
 }
 
+/* Contact section extra formatting*/
 @media (max-width: 700px) {
     .contact {
         flex-wrap: wrap;
@@ -743,6 +757,7 @@ h1 {
     }
 }
 
+/*Extra break for all sections except contact page*/
 @media (max-width: 600px) {
     h1 {
         font-size: 7em;
@@ -813,6 +828,7 @@ h1 {
         padding-bottom: 20px;
     }
 }
+
 /* Landscape phones and down */
 @media (max-width: 480px) {
 
