@@ -4,6 +4,10 @@
 
 // styles
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     color: #2C2C2C;
 }
@@ -24,7 +28,7 @@ h1 {
     text-transform: uppercase;
     font-family: 'Lora', serif;
     font-weight: 700;
-    font-size: 100px;
+    font-size: 10em;
     line-height: 92px;
 }
 
@@ -32,7 +36,7 @@ h2 {
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    font-size: 42px;
+    font-size: 4.2em;
     letter-spacing: 1px;
 }
 
@@ -40,7 +44,7 @@ h3 {
     text-transform: uppercase;
     font-family:'Roboto', sans-serif;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 3.2em;
     letter-spacing: 1px;
 }
 
@@ -48,7 +52,7 @@ h4 {
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 2.4em;
     letter-spacing: 1px;
 }
 
@@ -68,29 +72,30 @@ button {
     a {
         text-decoration: none;
         font-weight: 700;
+        font-size: 1.8em;
     }
 }
 
 i {
-    font-size: 26px;
+    font-size: 2.6em;
 }
 
 .nav-bar {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 2em;
     line-height: 29px;
     letter-spacing: 1px;
 }
 
 span {
     font-family: 'Lora', serif;
-    font-size: 35px;
+    font-size: 2.4em;
 }
 
 p {
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 2em;
     line-height: 32px;
 }
 
@@ -216,7 +221,7 @@ p {
     display: flex;
     h3 {
         margin: 0;
-        font-size: 26px;
+        font-size: 2.6em;
     }
     .blurb-content {
         padding-left: 20px;
@@ -296,7 +301,7 @@ p {
         margin: 0 0 0 150px;
         position: relative;
         top: 310px;
-        font-size: 62px;
+        font-size: 6.2em;
     }
 }
 
@@ -312,7 +317,7 @@ p {
     }
     span {
         color: #285E64;
-        font-size: 20px;
+        font-size: 1em;
         font-weight: 700;
     }
     button a {
@@ -334,7 +339,7 @@ p {
     width: 70%;
     h2 {
         margin: 20px 0 0;
-        font-size: 32px;
+        font-size: 3.2em;
     }
 }
 
@@ -348,7 +353,7 @@ p {
         padding: 25px 30px 10px;
         h4 {
             margin: 0;
-            font-size: 20px;
+            font-size: 2em;
         }
         p {
             margin-top: 10px;
@@ -360,7 +365,7 @@ p {
     background: white;
     h4 {
         margin-bottom: 0;
-        font-size: 20px;
+        font-size: 2em;
         padding: 30px 30px 15px;
     }
     ul {
@@ -373,7 +378,7 @@ p {
         color: #F6A823;
         display: inline-block;
         width: 20px;
-        font-size: 12px;
+        font-size: 1.2em;
     }
     li {
         padding-bottom: 5px;
@@ -402,7 +407,7 @@ p {
     margin: 40px 0 10px;
     h5 {
         color: #285E64;
-        font-size: 20px;
+        font-size: 2em;
         margin: 0;
         font-style: italic;
     }
@@ -450,7 +455,7 @@ footer {
         margin: 0 0 0 150px;
         position: relative;
         top: 310px;
-        font-size: 62px;
+        font-size: 6.2em;
     }
 }
 
@@ -482,7 +487,7 @@ h1 {
         i {
             color: #F6A823;
             padding: 40px 15px 20px;
-            font-size: 30px;
+            font-size: 3em;
         }
         i:first-child {
             padding-left: 0px;
@@ -491,7 +496,7 @@ h1 {
 }
 
 .contact-info h5 {
-    font-size: 24px;
+    font-size: 2.4em;
     margin: 0 0 20px 0;
 }
 
@@ -501,4 +506,372 @@ h1 {
 
 .contact-form {
     width: 65%;
+}
+
+// media queries
+
+@media (max-width: 980px) {
+    html {
+        font-size: 55%;
+    }
+    header ul {
+        margin: 0 175px;
+    }
+}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+    html {
+        font-size: 52%;
+    }
+
+    .main-title img {
+        display: none;
+    }
+
+    .gallery-section {
+        justify-content: space-around;
+        img {
+            margin: 60px 5px;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    header ul {
+        margin: 0 150px;
+    }
+}
+
+/* Landscape phone to portrait tablet */
+
+@media (max-width: 768px) {
+    header nav {
+        display: none;
+    }
+
+    .home-page {
+        flex-wrap: wrap;
+        justify-content: center;
+        .main-title {
+            width: 65%;
+            text-align: center;
+        }
+        .sophie-img {
+            width: 40%;
+        }
+    }
+
+    .who-is-sophie {
+        text-align: center;
+    }
+
+    .fav-things {
+        flex-wrap: wrap;
+        .fav-things-img {
+            width: 70%;
+        }
+        .fav-things-content {
+            width: 80%;
+            padding-left: 20px;
+            padding-top: 0;
+            padding-bottom: 30px;
+        }
+    }
+
+    .travelled {
+        flex-wrap: wrap;
+        .travelled-img {
+            width: 70%;
+            img {
+                position: relative;
+                top: 0;
+            }
+        }
+        .travelled-content {
+            width: 80%;
+            padding-right: 20px;
+            padding-top: 30px;
+        }
+    }
+
+    .blurb-section {
+        padding-top: 20px;
+        border-bottom: 5px solid #F6A823;
+        .blurbs {
+            flex-direction: column;
+            align-items: center;
+            .blurb {
+                width: 100%;
+            }
+        }
+    }
+
+    .journey-header-img {
+        display: none;
+    }
+
+    .journey-section {
+        padding-top: 20px;
+        .journey {
+            flex-direction: column;
+            align-items: center;
+            .journey-img {
+                width: 50%;
+                box-shadow: none;
+                margin: 0;
+                padding: 20px 40px 0;
+            }
+            .journey-content {
+                padding-top: 40px;
+                text-align: center;
+            }
+        }
+    }
+
+    .gallery {
+        flex-wrap: wrap;
+        justify-content: center;
+        img {
+            width: 85%;
+            margin-bottom: 0;
+        }
+        img:last-child {
+            margin-bottom: 60px;
+        }
+
+    }
+
+    .blog-home,
+    .contact-home {
+        height: 30vh;
+    }
+
+    .blog-home h1,
+    .contact-home h1 {
+        position: relative;
+        top: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .blog-section,
+    .get-in-touch {
+        padding-top: 20px;
+    }
+
+    .column1,
+    .contact-info {
+        width: 40%;
+    }
+
+    .column2,
+    .comtact-form {
+        width: 60%;
+    }
+
+    .contact-form {
+        margin-left: 15px;
+    }
+
+    .contact-info {
+        margin-bottom: 200px;
+    }
+
+    .jeremy-post,
+    .julia-post {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .jeremy-img,
+    .julia-img {
+        margin-bottom: 20px;
+        padding-bottom: 0;
+        width: 70%;
+    }
+
+    .jeremy-content,
+    .julia-content {
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .contact {
+        padding-bottom: 40px;
+    }
+
+    .user-info {
+        flex-wrap: wrap;
+        align-content: space-between;
+        input {
+            width: 100%;
+        }
+    }
+
+    input[type="email"] {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .contact {
+        flex-wrap: wrap;
+        .contact-info,
+        .contact-form {
+            width: 80%;
+            text-align: center;
+        }
+    }
+
+    .contact-info .social-media,
+    .contact-info h5,
+    .contact-info p {
+        padding: 0;
+    }
+    
+    .contact-info p:last-child {
+        padding-bottom: 20px;
+    }
+
+    .contact-info {
+        margin-bottom: 40px;
+    }
+
+    .contact-form {
+        margin: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 7em;
+    }
+
+    .who-is-sophie {
+        margin: 0 70px;
+    }
+
+    .fav-things {
+        justify-content: center;
+        .fav-things-content {
+            text-align: center;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .travelled {
+        justify-content: center;
+        .travelled-content {
+            text-align: center;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .column {
+        flex-direction: column;
+        align-content: center;
+        .column1,
+        .column2 {
+            width: 90%;
+        }
+    }
+
+    .column1 {
+        margin-bottom: 10px;
+    }
+
+    .sophie-content h4,
+    .sophie-content p {
+        text-align: center;
+        a {
+            display: block;
+        }
+    }
+
+    .recent-posts h4 {
+        text-align: center;
+    }
+
+    .jeremy-post,
+    .julia-post {
+        align-content: center;
+    }
+
+    .jeremy-img, 
+    .julia-img {
+        padding: 40px 0 0;
+        width: 40%;
+        img {
+            width: 100%;
+        }
+    }
+
+    .blog-section {
+        padding-bottom: 20px;
+    }
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+    .sophie-img {
+        display: none;
+    }
+
+    .home {
+        padding-bottom: 40px;
+    }
+
+    .about-section {
+        .who-is-sophie {
+            padding-bottom: 80px;
+            h2 {
+                padding-top: 20px;
+            }
+        }
+    }
+
+    .blurbs {
+        flex-direction: column;
+        .blurb {
+            flex-direction: column;
+            align-items: center;
+            .blurb-title {
+                text-align: center;
+                padding-right: 15px;
+                padding-top: 5px;
+            }
+            .blurb-text {
+                display: none;
+            }
+        }
+    }
+
+    .journey-section .journey {
+        .journey-img {
+            width: 70%;
+            padding: 0;
+            img {
+                width: 100%;
+            }
+        }
+        .journey-content {
+            padding: 40px 0 0;
+        }
+    }
+
+    .gallery {
+        padding: 0;
+    }
+
+    .gallery img {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .gallery img:last-child {
+        margin-bottom: 10px;
+    }
 }

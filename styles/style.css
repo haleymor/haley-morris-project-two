@@ -301,6 +301,10 @@ form {
   border: none;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   color: #2C2C2C;
 }
@@ -319,7 +323,7 @@ h1 {
   text-transform: uppercase;
   font-family: 'Lora', serif;
   font-weight: 700;
-  font-size: 100px;
+  font-size: 10em;
   line-height: 92px;
 }
 
@@ -327,7 +331,7 @@ h2 {
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
-  font-size: 42px;
+  font-size: 4.2em;
   letter-spacing: 1px;
 }
 
@@ -335,7 +339,7 @@ h3 {
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 3.2em;
   letter-spacing: 1px;
 }
 
@@ -343,7 +347,7 @@ h4 {
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 2.4em;
   letter-spacing: 1px;
 }
 
@@ -365,28 +369,29 @@ button {
 button a {
   text-decoration: none;
   font-weight: 700;
+  font-size: 1.8em;
 }
 
 i {
-  font-size: 26px;
+  font-size: 2.6em;
 }
 
 .nav-bar {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 2em;
   line-height: 29px;
   letter-spacing: 1px;
 }
 
 span {
   font-family: 'Lora', serif;
-  font-size: 35px;
+  font-size: 2.4em;
 }
 
 p {
   font-family: 'Roboto', sans-serif;
-  font-size: 20px;
+  font-size: 2em;
   line-height: 32px;
 }
 
@@ -532,7 +537,7 @@ p {
 
 .blurb h3 {
   margin: 0;
-  font-size: 26px;
+  font-size: 2.6em;
 }
 
 .blurb .blurb-content {
@@ -621,7 +626,7 @@ p {
   margin: 0 0 0 150px;
   position: relative;
   top: 310px;
-  font-size: 62px;
+  font-size: 6.2em;
 }
 
 .blog-section {
@@ -638,7 +643,7 @@ p {
 
 .blog-section span {
   color: #285E64;
-  font-size: 20px;
+  font-size: 1em;
   font-weight: 700;
 }
 
@@ -662,7 +667,7 @@ p {
 
 .column2 h2 {
   margin: 20px 0 0;
-  font-size: 32px;
+  font-size: 3.2em;
 }
 
 .blog-about-sophie {
@@ -680,7 +685,7 @@ p {
 
 .blog-about-sophie .sophie-content h4 {
   margin: 0;
-  font-size: 20px;
+  font-size: 2em;
 }
 
 .blog-about-sophie .sophie-content p {
@@ -693,7 +698,7 @@ p {
 
 .recent-posts h4 {
   margin-bottom: 0;
-  font-size: 20px;
+  font-size: 2em;
   padding: 30px 30px 15px;
 }
 
@@ -708,7 +713,7 @@ p {
   color: #F6A823;
   display: inline-block;
   width: 20px;
-  font-size: 12px;
+  font-size: 1.2em;
 }
 
 .recent-posts li {
@@ -746,7 +751,7 @@ p {
 .jeremy-post h5,
 .julia-post h5 {
   color: #285E64;
-  font-size: 20px;
+  font-size: 2em;
   margin: 0;
   font-style: italic;
 }
@@ -794,7 +799,7 @@ footer p {
   margin: 0 0 0 150px;
   position: relative;
   top: 310px;
-  font-size: 62px;
+  font-size: 6.2em;
 }
 
 h1 {
@@ -832,7 +837,7 @@ h1 {
 .contact-info p i {
   color: #F6A823;
   padding: 40px 15px 20px;
-  font-size: 30px;
+  font-size: 3em;
 }
 
 .contact-info .social-media i:first-child,
@@ -842,7 +847,7 @@ h1 {
 }
 
 .contact-info h5 {
-  font-size: 24px;
+  font-size: 2.4em;
   margin: 0 0 20px 0;
 }
 
@@ -852,4 +857,367 @@ h1 {
 
 .contact-form {
   width: 65%;
+}
+
+@media (max-width: 980px) {
+  html {
+    font-size: 55%;
+  }
+  header ul {
+    margin: 0 175px;
+  }
+}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  html {
+    font-size: 52%;
+  }
+  .main-title img {
+    display: none;
+  }
+  .gallery-section {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .gallery-section img {
+    margin: 60px 5px;
+  }
+}
+
+@media (max-width: 850px) {
+  header ul {
+    margin: 0 150px;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  header nav {
+    display: none;
+  }
+  .home-page {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .home-page .main-title {
+    width: 65%;
+    text-align: center;
+  }
+  .home-page .sophie-img {
+    width: 40%;
+  }
+  .who-is-sophie {
+    text-align: center;
+  }
+  .fav-things {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .fav-things .fav-things-img {
+    width: 70%;
+  }
+  .fav-things .fav-things-content {
+    width: 80%;
+    padding-left: 20px;
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+  .travelled {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .travelled .travelled-img {
+    width: 70%;
+  }
+  .travelled .travelled-img img {
+    position: relative;
+    top: 0;
+  }
+  .travelled .travelled-content {
+    width: 80%;
+    padding-right: 20px;
+    padding-top: 30px;
+  }
+  .blurb-section {
+    padding-top: 20px;
+    border-bottom: 5px solid #F6A823;
+  }
+  .blurb-section .blurbs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .blurb-section .blurbs .blurb {
+    width: 100%;
+  }
+  .journey-header-img {
+    display: none;
+  }
+  .journey-section {
+    padding-top: 20px;
+  }
+  .journey-section .journey {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .journey-section .journey .journey-img {
+    width: 50%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin: 0;
+    padding: 20px 40px 0;
+  }
+  .journey-section .journey .journey-content {
+    padding-top: 40px;
+    text-align: center;
+  }
+  .gallery {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .gallery img {
+    width: 85%;
+    margin-bottom: 0;
+  }
+  .gallery img:last-child {
+    margin-bottom: 60px;
+  }
+  .blog-home,
+  .contact-home {
+    height: 30vh;
+  }
+  .blog-home h1,
+  .contact-home h1 {
+    position: relative;
+    top: 0;
+    margin: 0;
+    text-align: center;
+  }
+  .blog-section,
+  .get-in-touch {
+    padding-top: 20px;
+  }
+  .column1,
+  .contact-info {
+    width: 40%;
+  }
+  .column2,
+  .comtact-form {
+    width: 60%;
+  }
+  .contact-form {
+    margin-left: 15px;
+  }
+  .contact-info {
+    margin-bottom: 200px;
+  }
+  .jeremy-post,
+  .julia-post {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .jeremy-img,
+  .julia-img {
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    width: 70%;
+  }
+  .jeremy-content,
+  .julia-content {
+    padding-top: 0;
+    text-align: center;
+  }
+  .contact {
+    padding-bottom: 40px;
+  }
+  .user-info {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+  }
+  .user-info input {
+    width: 100%;
+  }
+  input[type="email"] {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .contact .contact-info,
+  .contact .contact-form {
+    width: 80%;
+    text-align: center;
+  }
+  .contact-info .social-media,
+  .contact-info h5,
+  .contact-info p {
+    padding: 0;
+  }
+  .contact-info p:last-child {
+    padding-bottom: 20px;
+  }
+  .contact-info {
+    margin-bottom: 40px;
+  }
+  .contact-form {
+    margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 7em;
+  }
+  .who-is-sophie {
+    margin: 0 70px;
+  }
+  .fav-things {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .fav-things .fav-things-content {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .travelled {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .travelled .travelled-content {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .column .column1,
+  .column .column2 {
+    width: 90%;
+  }
+  .column1 {
+    margin-bottom: 10px;
+  }
+  .sophie-content h4,
+  .sophie-content p {
+    text-align: center;
+  }
+  .sophie-content h4 a,
+  .sophie-content p a {
+    display: block;
+  }
+  .recent-posts h4 {
+    text-align: center;
+  }
+  .jeremy-post,
+  .julia-post {
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .jeremy-img,
+  .julia-img {
+    padding: 40px 0 0;
+    width: 40%;
+  }
+  .jeremy-img img,
+  .julia-img img {
+    width: 100%;
+  }
+  .blog-section {
+    padding-bottom: 20px;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .sophie-img {
+    display: none;
+  }
+  .home {
+    padding-bottom: 40px;
+  }
+  .about-section .who-is-sophie {
+    padding-bottom: 80px;
+  }
+  .about-section .who-is-sophie h2 {
+    padding-top: 20px;
+  }
+  .blurbs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .blurbs .blurb {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .blurbs .blurb .blurb-title {
+    text-align: center;
+    padding-right: 15px;
+    padding-top: 5px;
+  }
+  .blurbs .blurb .blurb-text {
+    display: none;
+  }
+  .journey-section .journey .journey-img {
+    width: 70%;
+    padding: 0;
+  }
+  .journey-section .journey .journey-img img {
+    width: 100%;
+  }
+  .journey-section .journey .journey-content {
+    padding: 40px 0 0;
+  }
+  .gallery {
+    padding: 0;
+  }
+  .gallery img {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .gallery img:last-child {
+    margin-bottom: 10px;
+  }
 }
